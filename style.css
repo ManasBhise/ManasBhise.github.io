@@ -1,0 +1,111 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Header */
+header {
+    background-image: url(abstract-geometric-computer-wallpaper-white-border-connecting-dots-digital-technology-vector-design.jpg); /* Ensure this file exists in your folder */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    position: relative;
+    text-align: center;
+    color: white;
+    display: flex; /* Flexbox for vertical alignment */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 3rem;
+    margin: 0; /* Remove unnecessary margin */
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Adjust overlay transparency */
+    z-index: 1;
+}
+
+/* Navigation */
+nav {
+    position: absolute;
+    top: 20px; /* Adjusted for proper spacing */
+    right: 20px;
+    z-index: 2;
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.8); /* Slight background for visibility */
+}
+
+nav a:hover {
+    color: white;
+    background-color: #007bff;
+}
+
+/* About Section */
+#about {
+    padding: 30px; /* Increased padding for a larger section */
+    margin: 30px auto;
+    max-width: 1000px; /* Increased width for a larger section */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow for better visibility */
+}
+
+.about-content {
+    display: flex; /* Align image and text side by side */
+    align-items: center; /* Vertically align the image and text */
+    gap: 30px; /* Increased spacing between the image and text */
+}
+
+.about-image {
+    width: 200px; /* Increased image size */
+    height: 200px;
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure proper scaling of the image */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow for the image */
+}
+
+.about-text {
+    flex: 1; /* Allow the text to occupy remaining space */
+    font-size: 1.4rem; /* Increased text size for better readability */
+    line-height: 1.8; /* Improved line height for spacing */
+    color: #555;
+    text-align: left; /* Ensure proper alignment */
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+
