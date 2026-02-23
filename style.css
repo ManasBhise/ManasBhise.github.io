@@ -1,0 +1,458 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    /* Computer Science themed dark gradient */
+    background: radial-gradient(1200px 600px at 10% 10%, rgba(40,60,90,0.15), transparent 6%),
+                radial-gradient(1000px 500px at 90% 90%, rgba(20,40,70,0.12), transparent 8%),
+                linear-gradient(180deg, #071026 0%, #0f1b2b 100%);
+    color: #e6eef8;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* subtle code / binary overlay for visual flair */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+        repeating-linear-gradient(90deg, rgba(255,255,255,0.02) 0 1px, transparent 1px 24px),
+        linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0));
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Header */
+header {
+    /* use the included abstract image as a subtle background */
+    background-image: url('Images/abstract-geometric-computer-wallpaper-white-border-connecting-dots-digital-technology-vector-design.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+header h1 {
+    position: relative;
+    z-index: 3;
+    font-size: 3rem;
+    margin: 0;
+    font-weight: 700;
+    color: #cfe9ff;
+    text-shadow: 0 6px 18px rgba(3,8,20,0.6);
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(6,12,30,0.6), rgba(4,8,18,0.35));
+    z-index: 1;
+}
+
+/* Navigation */
+nav {
+    position: absolute;
+    top: 20px; /* Adjusted for proper spacing */
+    right: 20px;
+    z-index: 2;
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: #d7e9ff;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 8px 14px;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,255,255,0.02);
+}
+
+nav a:hover {
+    color: #ffffff;
+    background: rgba(64,140,255,0.12);
+    transform: translateY(-2px);
+}
+
+/* About Section */
+#about {
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 1000px;
+    background: rgba(4, 10, 20, 0.75);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(2,6,12,0.6);
+    border: 1px solid rgba(255,255,255,0.03);
+}
+
+.about-content {
+    display: flex; /* Align image and text side by side */
+    align-items: center; /* Vertically align the image and text */
+    gap: 30px; /* Increased spacing between the image and text */
+}
+
+.about-image {
+    width: 200px; /* Increased image size */
+    height: 200px;
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure proper scaling of the image */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow for the image */
+}
+
+.about-text {
+    flex: 1;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #d7e9ff;
+    text-align: left;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Add this to your CSS file */
+#projects {
+    padding: 50px 30px;
+    margin: 30px auto;
+    max-width: 1200px;
+}
+
+#projects h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #64ffda;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.project-card {
+    width: 100%;
+    max-width: 350px;
+    background: linear-gradient(180deg, rgba(6,12,25,0.9), rgba(8,16,32,0.85));
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(2,6,12,0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid rgba(255,255,255,0.03);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #d7e9ff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    .project-card {
+        max-width: 300px;
+    }
+    
+    #projects h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Add this to your CSS file */
+/* Add this to your CSS file */
+#skills {
+    padding: 30px 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    background: rgba(6,12,25,0.8);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(2,6,12,0.5);
+    border: 1px solid rgba(255,255,255,0.03);
+}
+
+#skills h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #64ffda;
+}
+
+.skills-container {
+    display: grid;
+    gap: 25px;
+}
+
+.skill-category h3 {
+    font-size: 1.3rem;
+    color: #007bff;
+    margin-bottom: 12px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #007bff;
+}
+
+.skill-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-item {
+    background: rgba(255,255,255,0.03);
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    color: #d7e9ff;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(255,255,255,0.02);
+}
+
+.skill-item:hover {
+    background: rgba(100,180,255,0.08);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    #skills {
+        padding: 20px 15px;
+    }
+
+    #skills h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .skill-category h3 {
+        font-size: 1.2rem;
+    }
+
+    .skill-item {
+        font-size: 0.85rem;
+        padding: 5px 10px;
+    }
+}
+
+
+.resume-download {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.download-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background: rgba(64,140,255,0.08);
+    color: #d7e9ff;
+    border: 1px solid rgba(100,255,218,0.12);
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.25s ease;
+}
+
+.download-btn:hover {
+    background: rgba(100,255,218,0.12);
+    color: #00121a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(6,12,24,0.6);
+}
+
+.download-icon {
+    transition: transform 0.3s ease;
+}
+
+.download-btn:hover .download-icon {
+    transform: translateY(2px);
+}
+
+/* Add this to your CSS file */
+#contact {
+    padding: 50px 30px;
+    margin: 30px auto;
+    max-width: 900px;
+    background: rgba(6,12,25,0.8);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(2,6,12,0.5);
+    border: 1px solid rgba(255,255,255,0.03);
+}
+
+#contact h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #64ffda;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    color: #d7e9ff;
+}
+
+.contact-item svg {
+    color: #007bff;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.03);
+    color: #d7e9ff;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: rgba(64,140,255,0.12);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(6,12,24,0.5);
+}
+
+@media (max-width: 768px) {
+    #contact {
+        padding: 30px 20px;
+    }
+
+    #contact h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact-item {
+        font-size: 1rem;
+    }
+}
+
+/* Education Section */
+.education-section {
+    padding: 60px 20px;
+    background: rgba(6,12,25,0.8);
+    text-align: center;
+}
+
+.education-section .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #64ffda;
+}
+
+.education-card {
+    max-width: 700px;
+    margin: 0 auto;
+    background: linear-gradient(180deg, rgba(8,16,32,0.95), rgba(6,12,25,0.9));
+    padding: 25px 30px;
+    border-radius: 16px;
+    box-shadow: 0px 10px 30px rgba(2,6,12,0.6);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.03);
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 16px rgba(0,0,0,0.12);
+}
+
+.education-card h3 {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 8px;
+}
+
+.education-card h3 {
+    font-size: 1.5rem;
+    color: #64ffda;
+    margin-bottom: 8px;
+}
+.education-card .college {
+    font-size: 1rem;
+    color: #d7e9ff;
+    margin-bottom: 5px;
+}
+
+.education-card .year {
+    font-size: 0.95rem;
+    color: rgba(215,233,255,0.75);
+    margin-bottom: 20px;
+}
+
+.education-card .details p {
+    margin: 12px 0 8px;
+    font-weight: 600;
+    color: #d7e9ff;
+}
+
+.education-card ul {
+    margin: 0 0 15px 18px;
+    padding: 0;
+    color: #cfe5ff;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
