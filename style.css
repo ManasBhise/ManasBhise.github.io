@@ -16,18 +16,6 @@ body {
     overflow-x: hidden;
 }
 
-/* subtle code / binary overlay for visual flair */
-body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image:
-        repeating-linear-gradient(90deg, rgba(255,255,255,0.02) 0 1px, transparent 1px 24px),
-        linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0));
-    pointer-events: none;
-    z-index: 0;
-}
-
 /* Header */
 header {
     /* use the included abstract image as a subtle background */
@@ -129,13 +117,15 @@ html{
 }
 
 /* Add this to your CSS file */
-#projects {
+#projects,
+#publications {
     padding: 50px 30px;
     margin: 30px auto;
     max-width: 1200px;
 }
 
-#projects h2 {
+#projects h2,
+#publications h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 40px;
@@ -192,7 +182,8 @@ html{
         max-width: 300px;
     }
     
-    #projects h2 {
+    #projects h2,
+    #publications h2 {
         font-size: 2rem;
     }
 }
